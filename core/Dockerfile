@@ -9,12 +9,11 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-# Install dependencies first (for docker layer caching)
-COPY pyproject.toml ./
-RUN pip install --no-cache-dir .
-
 # Copy the rest of the application
 COPY . .
+
+# Install dependencies and the package
+RUN pip install --no-cache-dir .
 
 # Create directories for data and ensure permissions
 RUN mkdir -p data/uploads data/db \
