@@ -1,0 +1,51 @@
+{
+  "model_type": "lgbm_calibrated",
+  "thresholds": {
+    "match": 0.04,
+    "review": 0.04
+  },
+  "features": [
+    "name_jaro",
+    "name_levenshtein",
+    "name_token_sort",
+    "name_token_set",
+    "name_token_jaccard",
+    "name_exact",
+    "name_initial_comp",
+    "name_phonetic",
+    "name_len_diff",
+    "name_missing",
+    "address_token_set",
+    "address_token_jaccard",
+    "address_house_num",
+    "address_missing",
+    "phone_exact",
+    "phone_edit_dist_le_1",
+    "phone_last_7",
+    "phone_missing",
+    "email_exact",
+    "email_local_jaro",
+    "email_domain",
+    "email_missing",
+    "city_exact",
+    "city_jaro",
+    "city_missing",
+    "postcode_exact",
+    "postcode_first_3",
+    "postcode_missing"
+  ],
+  "calibration_data": {
+    "prob_true": [
+      0.0,
+      1.0,
+      0.0,
+      0.9947643979057592
+    ],
+    "prob_pred": [
+      1.5464772045203778e-05,
+      0.5682504712257059,
+      0.7179011841026548,
+      0.9996965937181982
+    ]
+  }
+}

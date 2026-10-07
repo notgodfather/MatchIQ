@@ -1,0 +1,8 @@
+{
+  "name":    {"a": ["name"],    "b": ["name"]},
+  "phone":   {"a": ["phone"],   "b": ["phone"]},
+  "email":   {"a": ["email"],   "b": ["email"]},
+  "address": {"a": ["address"], "b": ["address"]},
+  "city":    {"a": ["city"],    "b": ["city"]},
+  "postcode":{"a": ["postcode"],"b": ["postcode"]}
+}

@@ -1,0 +1,27 @@
+{
+  "blocker_name_key": {
+    "time_s": 0.102,
+    "candidates": 1268,
+    "completeness": 0.8528571428571429,
+    "reduction_ratio": 0.9997118181818182
+  },
+  "blocker_token_name_address": {
+    "time_s": 0.026,
+    "candidates": 46934,
+    "completeness": 0.9992857142857143,
+    "reduction_ratio": 0.9893331818181819
+  },
+  "blocker_tfidf_knn": {
+    "time_s": 0.398,
+    "candidates": 100000,
+    "completeness": 1.0,
+    "reduction_ratio": 0.9772727272727273
+  },
+  "union": {
+    "time_s": 0.526,
+    "candidates": 114942,
+    "completeness": 1.0,
+    "reduction_ratio": 0.9738768181818181,
+    "quality": 0.01218005602825773
+  }
+}

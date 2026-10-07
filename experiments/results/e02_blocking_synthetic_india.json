@@ -1,0 +1,39 @@
+{
+  "blocker_exact_phone": {
+    "time_s": 0.006,
+    "candidates": 1204,
+    "completeness": 0.8121428571428572,
+    "reduction_ratio": 0.9997263636363637
+  },
+  "blocker_exact_email": {
+    "time_s": 0.006,
+    "candidates": 929,
+    "completeness": 0.6335714285714286,
+    "reduction_ratio": 0.9997888636363637
+  },
+  "blocker_name_key": {
+    "time_s": 0.108,
+    "candidates": 1268,
+    "completeness": 0.8528571428571429,
+    "reduction_ratio": 0.9997118181818182
+  },
+  "blocker_token_name_address": {
+    "time_s": 0.027,
+    "candidates": 46934,
+    "completeness": 0.9992857142857143,
+    "reduction_ratio": 0.9893331818181819
+  },
+  "blocker_tfidf_knn": {
+    "time_s": 0.384,
+    "candidates": 100000,
+    "completeness": 1.0,
+    "reduction_ratio": 0.9772727272727273
+  },
+  "union": {
+    "time_s": 0.531,
+    "candidates": 114943,
+    "completeness": 1.0,
+    "reduction_ratio": 0.973876590909091,
+    "quality": 0.012179950062204745
+  }
+}
