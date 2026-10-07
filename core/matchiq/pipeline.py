@@ -61,15 +61,20 @@ def run_pipeline(
     print("4. Building features...")
     features_df = build_features(df_a_mapped, df_b_mapped, candidate_pairs)
     
+    # Ensure columns match training
+    with open(model_card_path, "r") as f:
+        model_card = json.load(f)
+    feature_cols = model_card["features"]
+    
+    if features_df.empty:
+        print("   No features to predict (0 candidate pairs).")
+        out_cols = ["id_A", "id_B", "probability", "decision"] + feature_cols
+        return pd.DataFrame(columns=out_cols)
+        
     print("5. Predicting probabilities...")
     with open(model_path, "rb") as f:
         model = pickle.load(f)
         
-    with open(model_card_path, "r") as f:
-        model_card = json.load(f)
-        
-    # Ensure columns match training
-    feature_cols = model_card["features"]
     # Reorder or fill missing feature columns with NaNs if any are missing
     for col in feature_cols:
         if col not in features_df.columns:
