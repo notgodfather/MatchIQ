@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://YOUR-RENDER-BACKEND-URL.onrender.com/$1"
+      "destination": "https://matchiq-8ybc.onrender.com/$1"
     },
     {
       "source": "/(.*)",
