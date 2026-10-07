@@ -147,7 +147,7 @@ def block_tfidf_knn(df_a: pd.DataFrame, df_b: pd.DataFrame, cols: Sequence[str],
 
     # Use NearestNeighbors for fast sparse kNN search
     # metric='cosine' uses sparse arrays natively in scikit-learn
-    nbrs = NearestNeighbors(n_neighbors=min(k, len(text_b)), metric="cosine", n_jobs=-1)
+    nbrs = NearestNeighbors(n_neighbors=min(k, len(text_b)), metric="cosine", n_jobs=1)
     nbrs.fit(vec_b)
     
     # distances are cosine distance, i.e., 1 - cosine similarity

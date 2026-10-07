@@ -53,7 +53,7 @@ def run_pipeline(
         
     blocks.append(block_name_key(df_a_mapped, df_b_mapped, "_norm_name", "_norm_city"))
     blocks.append(block_token(df_a_mapped, df_b_mapped, ["_norm_name", "_norm_address"], max_block_size=1000))
-    blocks.append(block_tfidf_knn(df_a_mapped, df_b_mapped, ["_norm_name", "_norm_address", "_norm_city"], k=50))
+    blocks.append(block_tfidf_knn(df_a_mapped, df_b_mapped, ["_norm_name", "_norm_address", "_norm_city"], k=10))
     
     candidate_pairs = combine_blocks(*blocks)
     print(f"   Generated {len(candidate_pairs)} candidate pairs.")

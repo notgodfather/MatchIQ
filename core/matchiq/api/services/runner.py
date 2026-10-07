@@ -29,14 +29,14 @@ def run_job_background(job_id: str):
         dataset_b = db.query(Dataset).filter(Dataset.id == job.dataset_b_id).first()
         
         import os
-        base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
-        # base_dir is /Users/ankitranjan/miniproject
+        base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        # base_dir is core/matchiq
         
-        model_path = os.path.join(base_dir, "experiments", "results", "model.pkl")
-        model_card_path = os.path.join(base_dir, "experiments", "results", "model_card.json")
+        model_path = os.path.join(base_dir, "models", "model.pkl")
+        model_card_path = os.path.join(base_dir, "models", "model_card.json")
         
         # Temporary output path
-        output_dir = os.path.join(base_dir, "data", "uploads")
+        output_dir = os.path.join(os.path.dirname(base_dir), "data", "uploads")
         os.makedirs(output_dir, exist_ok=True)
         output_path = os.path.join(output_dir, f"job_{job_id}_results.csv")
         
